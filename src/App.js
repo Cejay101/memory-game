@@ -71,7 +71,7 @@ function App() {
   }
  useEffect(()=>{
   handleNewGame()
- },[])
+ })
   return (
     <div className="App">
       <h1>Magic Match</h1>
