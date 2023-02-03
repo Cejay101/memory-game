@@ -64,14 +64,14 @@ function App() {
     const shuffleCards = [...card, ...card]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() * 0.5 }));
-      setChoice(null)
+      setChoiceOne(null)
       setChoiceTwo(null)
     setCards(shuffleCards);
     setTurns(0);
   }
-//  useEffect(()=>{
-//   handleNewGame()
-//  },[])
+ useEffect(()=>{
+  handleNewGame()
+ },[])
   return (
     <div className="App">
       <h1>Magic Match</h1>
