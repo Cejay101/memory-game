@@ -1,0 +1,27 @@
+.card{
+  position: relative;
+}
+.card img{
+  display: block;
+  border-radius: 10px;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+.card .front{
+  position:absolute;
+  transform: rotateY(90deg);
+  transition: all ease-in;
+}
+.flipped .front{
+  transform: rotateY(0deg);
+  transition: 0.3s ease-in;
+  
+}
+.card .back{
+  transform: rotateY(0deg);
+  transition: all 0.3s ease-in;
+}
+
+.flipped .back{
+  transform: rotateY(90deg);
+  transition:  ease-in;
+}
