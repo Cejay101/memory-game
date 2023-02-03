@@ -69,9 +69,9 @@ function App() {
     setCards(shuffleCards);
     setTurns(0);
   }
- useEffect(()=>{
-  handleNewGame()
- },[])
+//  useEffect(()=>{
+//   handleNewGame()
+//  },[])
   return (
     <div className="App">
       <h1>Magic Match</h1>
