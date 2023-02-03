@@ -34,25 +34,15 @@ function App() {
             return { ...card, match: true };
           });
         });
-        // cards.map(card=>{
-        //   return {...card, match:true  }
-        // })
-
-        console.log("cards match");
+      
         resetTurn();
       } else {
-        console.log("cards do not match");
         setTimeout(() => {
           resetTurn();
         }, 1000);
       }
     }
   }, [choiceOne, choiceTwo]);
-  // console.log(matching)
-  // console.log(choiceOne)
-  console.log(cards);
-  // console.log(choiceTwo)
-  // console.log(turns)
   const resetTurn = () => {
     setTurns((turn) => turn + 1);
     setChoiceOne(null);
