@@ -59,7 +59,9 @@ function App() {
     setChoiceTwo(null);
     setDisabled(false)
   };
-
+const handleTurn=()=>{
+  setTurns(turns-1)
+}
   const handleNewGame = () => {
     const shuffleCards = [...card, ...card]
       .sort(() => Math.random() - 0.5)
@@ -83,11 +85,12 @@ function App() {
             card={card}
             setChoice={setChoice}
             flipped={card === choiceOne || card === choiceTwo || card.match}
-            disabled ={disabled}
+            disabled={disabled}
           />
         ))}
       </div>
       <p>Turns:{turns}</p>
+      <p onClick={handleTurn} style={{color:'#1b1523'}} >cheat</p>
     </div>
   );
 }
